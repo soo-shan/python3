@@ -1,0 +1,50 @@
+Object: Object is a collection of data with associated behaviors
+Class: Classes describe Objects. They are like blueprints for creating an Object
+Association: Most basic way for two classes to be related
+Object: Objects are instances of classes that are associated with each other. An Object instance is a specific Object with its own set of data and behaviors.
+Cardinality refers to the actual number of items in the set whereas Multiplicity specifies how small or how large this number could go.
+Data describes object and typically represents the individual characteristics of a certain object. A class can define specific sets of a characteristics (attributes) that are shared by all objects of that class. Any specific object can have different data values for the given attribute.
+Attributes are frequently referred as members or properties.
+( In other languages: attributes are settable while properties are read-only )
+Behaviors are actions that can occur on an object.
+The behaviors that can be performed on a specific class objects are called methods.
+At the programming level, methods are like functions but have access to all the data associated with the object.
+Methods can accept parameters and return values.
+Parameters to a method are a list of objects that need to be passed into the method that is being called. The objects that are passed in from the calling object are referred to as arguments. The objectsare used by the method to perform whatever behavior or task it is meant to do. Returned values are the results of that task.
+Interface : Collection of attributes and methods that other objects can use to interact with a particular object
+Information Hiding: process of hiding the implementation or functional details of an object. It is also sometimes referred to as encapsulation, encapsulated data is not necessarily hidden.
+Program objects may represent real objects but that does not make them real object. They are models.
+Model: An abstaction of real concept
+Abstraction: Abstraction means dealing with the level of detail that is most appropriate to a given task. Abstraction is the process of encapsulating information with separate public and private interfaces. The private interfaces can be subject to information hiding.
+Object >> Noun
+Method >> Verb 
+Attribute >> Adjective or Noun (if they refers to another object that is part of the current object)
+
+Most design partterns rely on two basic object oriented principles: 1) Composition 2) Inheritance
+
+Composition: Act of collecting several objects together to create a new one. 
+Aggregation: Aggregation is almost exactly like composition but the difference is that aggregate objects can exist independently. Composition is aggregation; aggregation is simply a more general form of composition. Any composite relationship is also an aggregate relationship but not vice versa.
+Inheritance: The is a relationship is formed by inheritance. One class can inherit attributes and methods from another class
+Abstract Class: Objects cannot be instantiated. Abstract classes require subclasses to further define attributes necessary for individual instantiation. Abstract classes force a class to implement methods.
+Abstract classes can contain abstract methods: methods without an implementation.
+Polymorphism: Ability to treat a class differently, depending on which subclass is implemented.
+Multiple Inheritance: allows a subclass to inherit functionality from multiple parent classes. 
+Specialization: creating or changing attributes or behaviors on the subclass to make it somehow different from the parent class.
+UML Diagram
+In case of association small arrow mentions what goes in what ( or other relation ). Mulitplicity is mentioned beside each class. * represents many
+Attributes & Methods are mentioned in a box representing the class
+Composition relationship is represented as a solid diamond.
+Aggregation relationship is represented as a hollow diamond.
+Inheritance is represented as a Hollow arrow.
+
+
+
+
+
+
+
+
+
+
+
+
