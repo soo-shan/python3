@@ -26,8 +26,14 @@ class OggFile(AudioFile):
     def play(self):
         print(f"playing {self.filename} as ogg")
 
-ogg_player = OggFile("myfile.ogg")
-ogg_player.play()
 
-mp3_player = MP3File("myfile.mp3")
-mp3_player.play()
+# ogg_player = OggFile("myfile.ogg")
+# ogg_player.play()
+#
+# mp3_player = MP3File("myfile.mp3")
+# mp3_player.play()
+#
+# wav_player = WavFile("myfile.wav")
+# wav_player.play()
+#
+# not_wav_file = WavFile("myfile.pdf")
