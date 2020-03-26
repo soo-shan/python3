@@ -18,7 +18,7 @@ class MediaLoader(metaclass=abc.ABCMeta):
     def __subclasshook__(cls,C):
         if cls is  MediaLoader:
             attrs =  set(dir(C))
-            if set(cls.__abstractmethods__) <= attrs
+            if set(cls.__abstractmethods__) <= attrs:
                 return True
 
         return NotImplemented
@@ -28,4 +28,14 @@ class Wav(MediaLoader):
 
 class Ogg(MediaLoader):
     ext = ".ogg"
+    def play(self):
+        pass
+
+
+## Since Wav class does not implement abstract attributes, its not possible to instantiate that class
+# o = Ogg()
+
+## Ogg provides both the attributes
+# w = Wav()
+
     
