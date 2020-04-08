@@ -1,5 +1,10 @@
 import abc
+
+
 class Assignment(metaclass=abc.ABCMeta):
+    """
+    Abstract Base Class for Assignments.
+    """
     @abc.abstractmethod
     def lesson(self, student):
         pass
@@ -18,30 +23,20 @@ class Assignment(metaclass=abc.ABCMeta):
         return NotImplemented
 
 
-class Statistics(Assignment):
-    """
-    Explicitly extend Assignment class with Statistics lesson
-    """
+class AssignmentGrader:
+    def __init__(self, student, AssignmentClass):
+        self.assignment = AssignmentClass()
+        self.assignment.student = student
+        self.attemps = 0
+        self.correct_attempts = 0
+
+    def check(self, code):
+        self.attempts += 1
+        result = self.assignment.check(code)
+        if result:
+            self.correct_attmepts += 1
+
+        return result
+
     def lesson(self):
-        return(
-            "Good work so far,"
-            + self.student
-            + ". Now calculate the average of the numbers "
-            + " 1, 5, 18, -3 and assign to a variable named 'avg'"
-            )
-
-    def check(self,code):
-        import statistics
-
-        code = "import statistics\n" + code
-
-        local_vars = {}
-        global_vars = {}
-        exec(code, global_vars, local_vars)
-
-        return local_vars.get("avg") == statistics.mean([1, 5, 18, -3])
-
-
-
-
-
+        return self.assignment.lesson()
