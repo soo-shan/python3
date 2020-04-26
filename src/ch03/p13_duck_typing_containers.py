@@ -1,4 +1,4 @@
-from collections import Container
+from collections.abc import Container
 print("Container.__abstractmethods__ : ", Container.__abstractmethods__)
 print()
 help(Container.__contains__)
@@ -12,7 +12,8 @@ class OddContainer:
         """
         Return True if a given value is in the set of odd integers
         """
-        if not isinstance(x, int) or not x % 2:
+        # if not isinstance(x, int) or not x % 2:
+        if not (isinstance(x, int) and (x % 2)):
             return False
         return True
 

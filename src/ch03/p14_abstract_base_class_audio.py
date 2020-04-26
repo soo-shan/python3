@@ -19,6 +19,7 @@ class MediaLoader(metaclass=abc.ABCMeta):
     def __subclasshook__(cls, C):
         if cls is MediaLoader:
             attrs = set(dir(C))
+            # '<=' operator checks wheather attrs is superset
             if set(cls.__abstractmethods__) <= attrs:
                 return True
 
@@ -41,4 +42,8 @@ class Ogg(MediaLoader):
 # w = Wav()
 
 ## Ogg provides both the attributes
-# o = Ogg()
+o = Ogg()
+## We can define Ogg class as a subclass of the MediaLoader class
+##  without actually extending MediaLoader class
+print("issubclass(Ogg, MediaLoader):",issubclass(Ogg, MediaLoader))
+print("isinstance(Ogg(),MediaLoader):",isinstance(Ogg(),MediaLoader))

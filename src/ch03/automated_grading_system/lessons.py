@@ -1,4 +1,4 @@
-from grader import Assignment
+from grader import Assignment, Grader
 
 
 class IntroPython:
@@ -36,4 +36,7 @@ class Statistics(Assignment):
 # Check IntroPython 
 print("issubclass(IntroPython,Assignment):",issubclass(IntroPython,Assignment))
 
+# Register IntroPython without instantiating
+grader = Grader()
+itp_id = grader.register(IntroPython)
 
